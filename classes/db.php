@@ -237,6 +237,11 @@ class DB
 			}
 			return $string;
 		}
+
+        if (empty($db)) {
+            $db = 'myevent3';
+        }
+
 		return \Database_Connection::instance($db)->quote_table($string);
 	}
 
